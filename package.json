@@ -1,0 +1,52 @@
+{
+    "name": "@scratching-platypus/vector-ts",
+    "version": "1.0.0",
+    "description": "Immutable 3D vector type for TypeScript",
+    "type": "module",
+    "main": "dist/index.mjs",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs"
+        }
+    },
+    "author": {
+        "name": "Martin Kosař",
+        "email": "koalix@post.cz"
+    },
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/scratching-platypus/vector-ts.git"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "vector",
+        "math",
+        "3d",
+        "geometry",
+        "immutable",
+        "typescript"
+    ],
+    "scripts": {
+        "build": "esbuild src/index.ts --bundle --format=esm --platform=neutral --outfile=dist/index.mjs --target=es2020 --sourcemap",
+        "release": "esbuild src/index.ts --bundle --format=esm --platform=neutral --outfile=dist/index.mjs --target=es2020 --sourcemap --minify",
+        "dev": "esbuild src/index.ts --bundle --format=esm --platform=neutral --outfile=dist/index.mjs --target=es2020 --sourcemap --watch",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "@typescript-eslint/eslint-plugin": "^8.50.1",
+        "@typescript-eslint/parser": "^8.50.1",
+        "esbuild": "^0.27.2",
+        "eslint": "^9.39.2",
+        "prettier": "3.7.4",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.50.1",
+        "vitest": "^4.0.16"
+    }
+}
